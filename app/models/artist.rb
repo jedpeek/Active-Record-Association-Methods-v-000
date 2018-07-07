@@ -13,6 +13,7 @@ class Artist < ActiveRecord::Base
   end
 
   def genre_count
+    self.songs.genre.uniq
     #return the number of genres associated with the artist
   end
 end
